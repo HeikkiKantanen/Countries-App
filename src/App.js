@@ -1,34 +1,35 @@
-import React, { Component } from "react";
-import axios from 'axios';
+import React from "react";
+import CountriesList from "./CountriesList";
+import Home from "./Home";
+import CountrySingle from "./CountrySingle";
+import { useParams, BrowserRouter, Link, Routes, Route } from "react-router-dom";
 
+const RouteWrapper = (props) => {
+  const params = useParams();
 
-class App extends Component {
-  state = {
-    data: [],
-  };
+  return <CountrySingle params={params}{...props}/>
+}
 
-  componentDidMount () {
-    axios
-    .get("https://restcountries.com/v3.1/all").then((res) => {
-      this.setState({ data: res.data });
-      console.log(this.state.data);
-    });
-  }
-
-
-  render () {
-    return (
-        <div className="countries">
-          {this.state.data.map((country) => (
-          <div className="country" key={country.name.common}>
-            <h2>{country.name.common}</h2> capital is <p>{country.capital}</p>
-            <img src={country.flags.png} />
-            {/* <p className="borders">Borders with: { country.borders }</p> */}
-          </div>
-          ))}
-        </div>
-      );
-    };
+const App = () => {
+  return (
+      <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+          <Link to="/countries">Countries</Link>
+          </li>
+        </ul>
+      </nav>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/countries" element={<CountriesList />} />
+          <Route path="/countries/:name" element={<RouteWrapper />} />
+        </Routes>
+      </ BrowserRouter>
+  );
 };
 
 export default App;

@@ -1,11 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
+  margin: 2rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: darkolivegreen;
+  background-color: rgb(0, 141, 82);
 }
 
 code {
@@ -13,45 +17,99 @@ code {
     monospace;
 }
 
+h1 {
+  text-align: center;
+}
+
+nav {
+  display:inline-block;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+Link {
+  text-decoration: none;
+}
+
+input {
+  margin-right: 25rem;
+  margin-left: 35rem;
+  margin-bottom: 2rem;
+  width: 10rem;
+}
+
 .countries {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  /* display: grid;
-  grid-template-columns: repeat (auto-fit, 300px);
-  justify-content: center; */
-  padding: 0 2rem;
-  margin-top: 10rem;
+  justify-content:space-between;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+  padding: 1rem;
+  text-decoration: none;
 }
 
 .country {
-  background-color: lavenderblush;
-  box-shadow: 0 0 5px #333;
-  height: 200px;
-  width: 500px;
-  display: grid;
-  grid-row: 1 / 2;
-  grid-column: 1 / 5;
-  display: inline-block; 
-  text-align: center;
+  position: relative;
   border-radius: 5px;
-  margin: 2rem;
+  box-shadow: 0 0 5px #333;
+  text-decoration: none;
+  background-color: rgb(248, 229, 56);
+  width: 400px;
+  height: 350px;
+  margin-bottom: 2rem;
   font-size: 1.2rem;
-  color: black;
+}
 
+.country:hover {
+  box-shadow: 0 0 15px black;
+  transform: translate(5px, 5px);
+}
+
+.name,
+.capital {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  list-style-type: none;
+  color: rgb(61, 0, 0);
+  padding-left: 1rem;
+  padding-top: 2.5rem;
+  height: 3rem;
+}
+
+.language {
+  padding-top: 1rem;
 }
 
 img {
-  float: right;
-  height: 50px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
+  top: -5px;
+  right: -5px;
   border-radius: 50%;
-  margin: 5px;
-  margin-top: -10rem;
+  position: absolute;
+  box-shadow: 0 0 5px #333;
 }
+
+.card-content {
+  background-color: lavenderblush;
+  text-decoration: none;
+  text-align: center;
+  height: 12rem;
+  padding-top: 0.5rem;
+  
+}
+
 
 /* .borders {
   text-align: center;
   line-break: normal;
 } */
+
+p {
+  color: rgb(61, 0, 0)
+}
