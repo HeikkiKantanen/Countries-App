@@ -4,11 +4,13 @@ import axios from "axios";
 // import number from "easy-number-formatter";
 
 function getCountry(capital) {
-    return axios.get(`https://restcountries.com/v2/capital/${capital}`);
+    return axios.get(`'https://restcountries.com/v2/capital/${capital}'`);
 }
 
 function getWeather(capital) {
-    return axios.get("", {
+    return axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=
+        ${process.env.REACT_APP_OPENWEATHER_KEY}`, {
         params: {
         acces_key: process.env.REACT_APP_API_KEY,
         query: capital,
@@ -35,9 +37,7 @@ class CountrySingle extends Component {
     render () {
         return (
             <div>
-                {this.props.params.name}
-                <p>country single will be here</p>
-              
+                Right now it is degrees in { this.props.params.name}
             </div>
         );
     }
