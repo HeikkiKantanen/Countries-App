@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import number from "easy-number-formatter";
+
 import "./loader.css";
 import CountryCard from "./CountryCard";
 
@@ -34,7 +34,7 @@ class CountriesList extends Component {
     render () {
         if (this.state.isLoading) {
           return (
-            <div class="lds-default">
+            <div className="lds-default">
               <div></div>
               <div></div>
               <div></div>

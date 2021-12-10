@@ -15,10 +15,10 @@ const CountryCard = ({
             <div className="country" key={name}>
                 <h2 className="name">{name}</h2> 
                 <h3 className="capital">{capital}</h3>
-                <img src={flags.png} alt={name}/>
+                <img className="flag" src={flags.png} alt={name}/>
                     <div className="card-content">
                         <p className="language">
-                            Language(s): 
+                            Language(s): {" "}
                             {languages.map((lang, i) => (
                                 <span key={i}> {lang.name} </span>
                         ))}
@@ -30,8 +30,11 @@ const CountryCard = ({
                             ))}
                         </p>
                         <p className="population">
-                            Population:    
+                            Population: {" "}
                             {number.formatNumber(population)}
+                        </p>
+                        <p className="more-info">
+                            Click for more info
                         </p>
                     </div>
             </div>
