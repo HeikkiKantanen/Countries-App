@@ -30,20 +30,26 @@ code {
   justify-content: center;
   align-items: center;
   font-size: 28px;
-  /* margin-top: 9rem; */
+  /* background-image: url("pexels-aaditya-arora-592753.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  height: 95vh; */
+}
+
+.home-wrapper {
   background-image: url("pexels-aaditya-arora-592753.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 95vh;
+  height: 100vh;
 }
 
 h1 {
   text-align: center;
   color: rgb(255, 255, 255);
   margin-left: 5rem;
-  margin-top: -12rem;
-  line-height: 7rem;
+  line-height: 6.7rem;
 }
 
 .to {
@@ -69,7 +75,9 @@ h1 {
 ul li {
   list-style-type: none;
   color: whitesmoke;
-  margin: 4px;
+  margin: 0.5rem;
+  line-height: 1.5rem;
+  font-size: 20px;
 }
 
 a {
@@ -86,6 +94,7 @@ input {
   margin-left: 37rem;
   margin-bottom: 2rem;
   width: 10rem;
+  outline: none;
 }
 
 .countries {

@@ -12,6 +12,7 @@ const RouteWrapper = (props) => {
 
 const App = () => {
   return (
+    <div className="home-wrapper">
       <BrowserRouter>
       <div className="nav-wrapper">
         <nav>
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/countries/:name" element={<RouteWrapper />} />
         </Routes>
       </ BrowserRouter>
+     </div>
   );
 };
 
